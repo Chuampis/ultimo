@@ -1,12 +1,8 @@
 const verCard = JSON.parse(localStorage.getItem('productoAVer'))
 
 function mostrarElProducto(card) {
-    const containerCard = document.getElementById('showProducto')
-    let verProducto = document.createElement('div')
-    console.log(verCard )
-    verProducto.className = 'card'
-    verProducto.innerHTML = `
-    <div class="row gx-4 gx-lg-5 align-items-center">
+    document.getElementById('showProducto').innerHTML = `
+                    <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="${card.img}" alt="..." /></div>
                     <div class="col-md-6">
                         <div class="small mb-1">SKU: BST-498</div>
@@ -28,7 +24,5 @@ function mostrarElProducto(card) {
                 </div>
             </div>
     `
-    console.log(verProducto)
-    containerCard.appendChild(card)
 }
 mostrarElProducto(verCard)
