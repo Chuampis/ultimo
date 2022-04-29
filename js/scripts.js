@@ -65,7 +65,7 @@ function generarCards(productosAMostrar) {
         <div class="card h-100">
             <!-- Sale badge-->
             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">
-                ${(elementoDelArray.stock > 0) ? 'Esta en venta' : 'Sin stock'}
+                ${(elementoDelArray.stock > 0) ? 'Disponible' : 'Sin stock'}
             </div>
             <!-- Product image-->
             <img class="card-img-top" src="${elementoDelArray.img}" alt="..." />
@@ -88,11 +88,11 @@ function generarCards(productosAMostrar) {
                         class="btn btn mt-auto" href="#">
                         Agregar al Carrito
                     </button>
-                    <button 
+                    <a 
                         onclick="irAlProducto(${elementoDelArray.id})"
-                        class="btn btn mt-auto" href="#">
+                        class="btn btn mt-auto" href="detalle.html">
                         Detalle Producto
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
